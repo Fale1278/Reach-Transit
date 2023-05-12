@@ -5,23 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reach Transit</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
  
 </head>
 <body>
-  <header class="header">
-    <span class="logo"><img src="images/Group 1.png" alt=""> <pan>Reach Transit</pan></span>
+  <header class="header" id="header">
+    <a href=""><span class="logo"><img src="images/Group 1.png" alt=""> <span>Reach Transit</span></span></a>
 
     <nav class="topnav">
       <a href="#about" class="topnav-a">About Us</a>
-      <a href="#sign" class="topnav-a">Booking</a>
+      <a href="#booking" class="topnav-a">Booking</a>
       <a href="#footer" class="topnav-a">Contact</a>
       <button class="btnOpen">Sign up/Login</button>
       <section class="box">
         <div class="form">
           <div class="close">&times;</div>
           <div class="phones">
-            <span><img src="images/Front.png" alt=""></span>
+            
+          <p>Social media shared today, tomorrow or by location</p>
+            <span><img src="images/Group 9048.png" alt=""></span>
           </div>
     
           <div class="form-body">
@@ -32,41 +36,43 @@
             <p>To Track your Trips</p>
     
             <div class="form-content">
-              <div class="form-box">
-                <input type="text" class="form-imput" placeholder="Full Name" required="required"> 
-                <input type="text" class="form-imput" placeholder="location" required="required"> 
-              </div>
-    
-              <div class="form-box">
-                <input type="text" class="form-imput" placeholder="Enter Email" required="required"> 
-                <input type="date" class="form-imput" placeholder="Date" required="required"> 
-              </div>
-    
-              <div class="form-box" >
-                <input type="password" class="form-imput" placeholder="Enter Password" required="required"> 
-                <input type="password" class="form-imput" placeholder="Confirm Password" required="required"> 
-              </div>
-              <div class="check">
-                <div>
-                  <ul><input type="checkbox">Remember Me</ul>
-                  <ul><input type="checkbox">I agree to the <a href="#" class="form-a">Terms</a> and <a href="#" class="form-a">Privacy Policy</a></ul>
+              <form>
+                <div class="form-box">
+                  <input type="text"  class="form-imput" placeholder="Full Name"> 
+                  <input type="text" class="form-imput" placeholder="location"> 
                 </div>
-    
-                <p><a href="#" class="form-a">Forgot Password?</a></p>
+      
+                <div class="form-box">
+                  <input type="text"class="form-imput" placeholder="Enter Email"> 
+                  <input type="date" class="form-imput" placeholder="Date"> 
+                </div>
+      
+                <div class="form-box" >
+                  <input type="password" class="form-imput" placeholder="Enter Password"> 
+                  <input type="password"  class="form-imput" placeholder="Confirm Password"> 
+                </div>
+                <div class="check">
+                  <div>
+                    <ul><input type="checkbox">Remember Me</ul>
+                    <ul><input type="checkbox">I agree to the <a href="#" class="form-a">Terms</a> and <a href="#" class="form-a">Privacy Policy</a></ul>
+                  </div>
+      
+                  <p><a href="#" class="form-a">Forgot Password?</a></p>
+                </div>
+                <div class="button">
+                  <button class="button-one"><a href="index2.html">Create Account</a></button>
+                  <button class="button-two"><img src="images/iconfinder_Google_1298745 1.svg" alt=""> Sign-in-with-google</button>
+                </div>
+      
+                <p class="already">Already have an account? <a href="index2.html" class="form-a">Login</a></p>
               </div>
-              <div class="button">
-                <a href="index2.html"><button class="button-one">Create Account</button></a>
-                <button class="button-two"><img src="images/iconfinder_Google_1298745 1.svg" alt=""> Sign-in-with-google</button>
+      
+              <div class="store-image">
+                <img src="images/Google Play Badge.png" alt="">
+                <img src="images/App Badge.png" alt="">
               </div>
-    
-              <p class="already">Already have an account? <a href="index2.html" class="form-a">Login</a></p>
+              </form>
             </div>
-    
-            <div class="store-image">
-              <img src="images/Google Play Badge.png" alt="">
-              <img src="images/App Badge.png" alt="">
-            </div>
-          </div>
         </div>
       </section>
     </nav>
@@ -81,7 +87,7 @@
           <p>Discover Hassle-Free Travel Across Nigeria with Our Transit Services.</p>
         </div>
   
-        <div class="available" id="sign">
+        <div class="available" id="booking">
           <div class="img-container">
             <img src="images/Truck_3D_Models_for_Download-removebg-preview 1.png" alt="">
           </div>
@@ -170,7 +176,102 @@
     
               <h3>Departure Date:</h3>
               <input type="date" class="city">
-              <button class="btn">Check Availability</button>
+              
+              <button class="btnOpen1">Check Availability</button>
+              <section class="box1">
+
+                  <div class="close1"><i class='bx bx-x'></i></div>
+                  <div class="check-body">
+                    <p class="check-text">Buy Tickets</p>
+            
+                    <div class="check-content">
+                      <div class="check-box">
+                        <p>From</p>
+                        <ul>Jos</ul>
+                      </div>
+            
+                      <div class="check-box">
+                        <p>To</p>
+                        <ul class="place">Abuja</ul>
+                      </div>
+            
+                      <div class="check-box">
+                        <p>Date</p>
+                        <ul>15/05/2023</ul>
+                      </div class="place">
+                    </div>
+                    
+                    <div class="detail-content">
+                      <div class="detail-box">
+                        <p>Bus Type</p>
+                        <p class="thick">Toyota Hiace</p> 
+                        <p class="others">AG, Non-Video(14 Seats)</p>
+                        <a href="#">Change Vehicle</a>
+                      </div>
+            
+                      <div class="detail-box">
+                        <p>Departure</p>
+                        <p class="thick">07:00 am</p>
+                        <p class="others">Thur 25th March 2023</p>
+                      </div>
+            
+                      <div class="detail-box">
+                        <p>Approximate Arrival</p>
+                        <p class="thick">01:00 pm</p>
+                        <p class="others">Thur 25th March 2023</p>
+                      </div>
+
+                      <div class="detail-box">
+                        <p>Available Seats</p>
+                        <p class="thick">5</p>
+                        
+                        <p class="others">Seats Available</p>
+                      </div>
+                      <div class="detail-box">
+                        <p>Price</p>
+                        <p class="thick">N5,000</p>
+                      </div>
+                      
+                    </div>
+                    
+                    <div class="btn-pay">
+                      <input type="text" placeholder="Apply Coupon">
+                      <button class="btnOpen2">Pay</button>
+                      <section class="box2">
+                        <div class="close2"><i class='bx bx-x'></i></div>
+                        <p class="p">PAYMENT</p>
+                        <div class="payment-content">
+                          <div class="payment-box">
+                            <p>Card NO</p>
+                            <div>
+                              <input type="number" placeholder="xxxx xxxx xxxx" required>
+                            </div>
+                          </div>
+
+                          <div class="payment-box">
+                            <p>CVV</p>
+                            <div>
+                              <input type="number" placeholder="xxx" required>
+                            </div>
+                          </div>
+
+                          <div class="payment-box">
+                            <p>Password</p>
+                            <div>
+                              <input type="password" placeholder=".........." required>
+                            </div>
+                          </div>
+
+                          <div class="payment-box">
+                            <p>Payment Amount</p>
+                            <p class="amount">N5,000</p>
+                            <button>Pay</button>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                </div>
+              </section>
               
           </div>
           </form>
@@ -213,7 +314,7 @@
     </section>
   
     <section class="fleet">
-      <h2>OUR SERVICES</h2>
+      <h2>OUR FLEET</h2>
       <p>Select a ride that matches your style and budget</p>
       <div class="fleet-contents">
         <div class="fleet-box">
@@ -285,10 +386,8 @@
       <h2>Customers feedback</h2>
 
       <div class="feedback-content">
-
-        <h1 class="feedback-next"><</h1>
         <div class="feedback-box">
-          <p><img src="images/Group.png" alt="" class="comment"></p>
+          <p class="comment"><img src="images/Group.png" alt="" ></p>
           <p>
             I recently used transit services and I am
              extremely pleased with the experience. The buses 
@@ -299,11 +398,11 @@
              Overall, I would highly recommend Reach transit services to 
              anyone looking for a convenient and hassle-free way to travel.
           </p>
-          <p><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
+          <p class="image"><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
         </div>
 
         <div class="feedback-box">
-          <p><img src="images/Group.png" alt="" class="comment"></p>
+          <p class="comment"><img src="images/Group.png" alt="" ></p>
           <p>
             I recently took a long-distance trip using 
             Reach transit services and was pleasantly 
@@ -314,11 +413,11 @@
             I would definitely use Reach 
             transit services for future long-distance trips.
           </p>
-          <p><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
+          <p class="image"><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
         </div>
 
         <div class="feedback-box">
-          <p><img src="images/Group.png" alt="" class="comment"></p>
+          <p class="comment"><img src="images/Group.png" alt=""  ></p>
           <p>
             I've been using transit services for my 
             daily commute and I must say, I'm impressed 
@@ -330,20 +429,15 @@
             transit services to anyone looking for 
             an affordable and reliable transportation option.
           </p>
-          <p><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
+          <p class="image"><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
         </div>
-        <h1 class="feedback-next">></h1>
       </div>
     </section>
 
     <section class="convenience">
       <div class="convenience-content">
         <div class="front">
-          <img src="images/Front.png" alt="">
-        </div>
-
-        <div class="front1">
-          <img src="images/Front1.png" alt="">
+          <img src="images/Group 9049.png" alt="">
         </div>
 
        <div class="convenience-text">
@@ -401,12 +495,14 @@
 
     <div class="copy-right">
       <p>Copy-right reserved by <span>Reach Transit</span>. 2023</p>
-      <p><a href="#">Terms of use | </a><a href="#">Privacy Policy</a></p>
+      <p>
+        <a href="#">Terms of use | </a>
+        <a href="#">Privacy Policy</a>
+      </p>
     </div>
   <footer>
 
 
 <script defer src="script.js"></script>
-<script defer src="script3.js"></script>
 </body>
 </html>
