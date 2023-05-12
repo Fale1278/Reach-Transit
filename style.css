@@ -761,8 +761,10 @@ section{
 .footer-box button img:hover{
   transform: scale(2);
 }
-.footer-box p .links{
-  width: 2.5rem;
+
+.footer-box p .links i{
+  font-size: 2rem;
+  padding: 1rem;
 }
 .copy-right{
   display: flex;
