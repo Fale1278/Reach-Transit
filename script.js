@@ -44,17 +44,17 @@ window.onscroll = (e) =>{
  let btnOpen1 = document.querySelector(".btnOpen1");
  let btnOpen2 = document.querySelector(".btnOpen2"); 
  let btnOpen3 = document.querySelector(".btnOpen3");
+ let btnOopen4 = document.querySelector(".btnOpen4");
  let box = document.querySelector(".box");
  let box1 = document.querySelector(".box1");
  let box2 = document.querySelector(".box2");
  let box3 = document.querySelector(".box3");
+ let box4 = document.querySelector(".box4");
  let close = document.querySelector(".close");
  let close1 = document.querySelector(".close1");
  let close2 = document.querySelector(".close2");
  let close3 = document.querySelector(".close3");
  let close4 = document.querySelector (".close4");
- let profile = document.querySelector(".profile");
- let profileBox = document.querySelector(".profileBox");
 
  btnOpen.addEventListener("click", (e)=>{
   e.preventDefault();
@@ -99,13 +99,13 @@ window.onscroll = (e) =>{
   box3.style.display="none";
  });
 
- profile.addEventListener("click", (e) =>{
+ btnOopen4.addEventListener("click", (e) =>{
   e.preventDefault();
-  profile.style.display = "none";
-  profileBox.style.display = "block";
+  btnOopen4.style.display = "none";
+  box4.style.display = "block";
  });
 
  close4.addEventListener("click", () =>{
-  profile.style.display = "inline";
-  profileBox.style.display = "none";
+  btnOopen4.style.display = "inline";
+  box4.style.display = "none";
  });
