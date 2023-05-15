@@ -988,6 +988,9 @@ section{
   
 }
 @media(max-width:500px){
+  .header{
+    position: absolute;
+  }
   .box{
     position: absolute;
     border-radius: 12px;
@@ -1034,6 +1037,11 @@ section{
   }
   .button .button-two{
     width: 20rem;
+    margin-top: 1rem;
+  }
+  .already{
+    padding: 0;
+    margin-left: 4rem;
   }
   .store-image {
     width: 1rem;

@@ -40,7 +40,7 @@ window.onscroll = (e) =>{
 };
 
 /* =============== button open for login ==============*/
-let btnOpen = document.querySelector(".btnOpen");
+ let btnOpen = document.querySelector(".btnOpen");
  let btnOpen1 = document.querySelector(".btnOpen1");
  let btnOpen2 = document.querySelector(".btnOpen2"); 
  let btnOpen3 = document.querySelector(".btnOpen3");
@@ -48,11 +48,13 @@ let btnOpen = document.querySelector(".btnOpen");
  let box1 = document.querySelector(".box1");
  let box2 = document.querySelector(".box2");
  let box3 = document.querySelector(".box3");
- let body = document.querySelector("body");
  let close = document.querySelector(".close");
  let close1 = document.querySelector(".close1");
  let close2 = document.querySelector(".close2");
  let close3 = document.querySelector(".close3");
+ let close4 = document.querySelector (".close4");
+ let profile = document.querySelector(".profile");
+ let profileBox = document.querySelector(".profileBox");
 
  btnOpen.addEventListener("click", (e)=>{
   e.preventDefault();
@@ -95,4 +97,15 @@ let btnOpen = document.querySelector(".btnOpen");
  close3.addEventListener("click", ()=>{
   btnOpen3.style.display="inline";
   box3.style.display="none";
+ });
+
+ profile.addEventListener("click", (e) =>{
+  e.preventDefault();
+  profile.style.display = "none";
+  profileBox.style.display = "block";
+ });
+
+ close4.addEventListener("click", () =>{
+  profile.style.display = "inline";
+  profileBox.style.display = "none";
  });

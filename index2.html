@@ -5,30 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reach Transit</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style2.css">
  
 </head>
-
 <body>
-  <header class="header">
-    <span class="logo"><img src="images/Group 1.png" alt=""> <pan>Reach Transit</pan></span>
-
+  <header class="header" id="header">
+    <a href=""><span class="logo"><img src="images/Group 1.png" alt=""> <span>Reach Transit</span></span></a>
+    <i class="bx bx-menu" id="menu-icon"></i>
     <nav class="topnav">
-      <a href="#about" class="topnav-a">About Us</a>
       <button class="btnOpen">Travel History</button>
-      <a href="index3.html" class="topnav-a">Booking</a>
+      <a href="#booking" class="topnav-a">Way Bill</a>
+      <a href="#booking" class="topnav-a">Tickets</a>
       <a href="#footer" class="topnav-a">Contact</a>
-      <!-- <a href="#"><img src="images/Ellipse 80.png" alt=""></a>  -->
-      <a href="index.html" class="topnav-a"><img src="images/Group 58.png" alt=""></a>
-
       <section class="box">
         <nav class="travel-header">
           <span>Travel History</span>
         </nav>
-        <div class="form">
           <div class="close">&times;</div>
-          <section class="travel-body">
-            
             <div class="travel-content">
               <div class="travel-box">
                 <div class="travel-item">
@@ -40,7 +36,7 @@
                   </div>
                   <div class="travel-text">
                     <h2>Bus Travel</h2>
-          
+                    <img src="images/Group 9046.png" alt="">
                     <h3>718km</h3>
                   </div>
                 </div>
@@ -62,7 +58,7 @@
                   </div>
                   <div class="travel-text">
                     <h2>Bus Travel</h2>
-          
+                    <img src="images/material-symbols_cancel.png" alt="">
                     <h3>718km</h3>
                   </div>
                 </div>
@@ -104,7 +100,8 @@
                   </div>
                   <div class="travel-text">
                     <h2>Bus Travel</h2>
-          
+                    
+                    <img src="images/Group 9046.png" alt="">
                     <h3>718km</h3>
                   </div>
                 </div>
@@ -116,10 +113,10 @@
                 <p class="details">See Full Details</p>
               </div>
             </div>
-          </section>
+
+            
     </nav>
   </header>
-
   <main>
     <ul class="ul-bg">
       <section class="about" id="home">
@@ -308,7 +305,12 @@
                           <div class="payment-box">
                             <p>Payment Amount</p>
                             <p class="amount">N5,000</p>
-                            <button>Pay</button>
+                            <button class="btnOpen3">Pay</button>
+                            <section class="box3">
+                              <div class="close3"><i class='bx bx-x'></i></div>
+                              <img src="images/Property 1=Variant2.png" alt="">
+                              
+                            </section>
                           </div>
                         </div>
                       </section>
@@ -357,7 +359,7 @@
     </section>
   
     <section class="fleet">
-      <h2>OUR SERVICES</h2>
+      <h2>OUR FLEET</h2>
       <p>Select a ride that matches your style and budget</p>
       <div class="fleet-contents">
         <div class="fleet-box">
@@ -429,10 +431,8 @@
       <h2>Customers feedback</h2>
 
       <div class="feedback-content">
-
-        <h1 class="feedback-next"><</h1>
         <div class="feedback-box">
-          <p><img src="images/Group.png" alt="" class="comment"></p>
+          <p class="comment"><img src="images/Group.png" alt="" ></p>
           <p>
             I recently used transit services and I am
              extremely pleased with the experience. The buses 
@@ -443,11 +443,11 @@
              Overall, I would highly recommend Reach transit services to 
              anyone looking for a convenient and hassle-free way to travel.
           </p>
-          <p><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
+          <p class="image"><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
         </div>
 
         <div class="feedback-box">
-          <p><img src="images/Group.png" alt="" class="comment"></p>
+          <p class="comment"><img src="images/Group.png" alt="" ></p>
           <p>
             I recently took a long-distance trip using 
             Reach transit services and was pleasantly 
@@ -458,11 +458,11 @@
             I would definitely use Reach 
             transit services for future long-distance trips.
           </p>
-          <p><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
+          <p class="image"><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
         </div>
 
         <div class="feedback-box">
-          <p><img src="images/Group.png" alt="" class="comment"></p>
+          <p class="comment"><img src="images/Group.png" alt=""  ></p>
           <p>
             I've been using transit services for my 
             daily commute and I must say, I'm impressed 
@@ -474,20 +474,15 @@
             transit services to anyone looking for 
             an affordable and reliable transportation option.
           </p>
-          <p><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
+          <p class="image"><img src="images/Ellipse 24.png" alt=""><span>Derek Brown</span></p>
         </div>
-        <h1 class="feedback-next">></h1>
       </div>
     </section>
 
     <section class="convenience">
       <div class="convenience-content">
         <div class="front">
-          <img src="images/Front.png" alt="">
-        </div>
-
-        <div class="front1">
-          <img src="images/Front1.png" alt="">
+          <img src="images/Group 9049.png" alt="">
         </div>
 
        <div class="convenience-text">
@@ -535,21 +530,25 @@
         <h3>Subscribe</h3>
         <p class="input"><input type="email" name="" id="" placeholder="Your email" > <button><img src="images/Group 58.png" alt=""></button></p>
         <p>
-          <a href="#"><i class='bx bxl-facebook-circle'></i></i></a>
-          <a href="#"><img src="images/🦆 icon _Twitter_.png" alt="" class="links"></a>
-          <a href="#"><img src="images/Group 56.png" alt="" class="links"></a>
-          <a href="#"><img src="images/Group 55.png" alt="" class="links"></a>
+          <a href="#" class="links"><i class='bx bxl-facebook-circle'></i></i></a>
+          <a href="#" class="links"><i class='bx bxl-twitter'></i></a>
+          <a href="#" class="links"><i class='bx bxl-youtube' ></i></a>
+          <a href="#" class="links"><i class='bx bxl-linkedin' ></i></a>
         </p>
       </div>
     </div>
 
     <div class="copy-right">
       <p>Copy-right reserved by <span>Reach Transit</span>. 2023</p>
-      <p><a href="#">Terms of use | </a><a href="#">Privacy Policy</a></p>
+      <p>
+        <a href="#">Terms of use | </a>
+        <a href="#">Privacy Policy</a>
+      </p>
     </div>
   <footer>
 
 
-  <script defer src="script2.js"></script> 
+<script defer src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
 </html>
