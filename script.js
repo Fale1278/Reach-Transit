@@ -14,14 +14,14 @@ let navLinks = document.querySelector("header nav a");
 
 window.onscroll = (e) =>{
   e.preventDefault();
-  sections.forEach(sec => {
+  sections.for(sec => {
     let top = window.scrollY;
     let offset = sec.offsetTop -150;
     let height = sec.offsetHeight;
     let id = sec.getAttribute ('id');
 
     if (top >= offset && top < offset + height){
-      navLinks.forEach(links => {
+      navLinks.for(links => {
         links.classList.remove('active');
         document.querySelector('header nav a[href*= '+ id +']').classList.add('active');
       });
@@ -45,16 +45,19 @@ window.onscroll = (e) =>{
  let btnOpen2 = document.querySelector(".btnOpen2"); 
  let btnOpen3 = document.querySelector(".btnOpen3");
  let btnOopen4 = document.querySelector(".btnOpen4");
+ let btnOpen5 = document.querySelector(".btnOpen5");
  let box = document.querySelector(".box");
  let box1 = document.querySelector(".box1");
  let box2 = document.querySelector(".box2");
  let box3 = document.querySelector(".box3");
  let box4 = document.querySelector(".box4");
+ let box5 = document.querySelector(".box5");
  let close = document.querySelector(".close");
  let close1 = document.querySelector(".close1");
  let close2 = document.querySelector(".close2");
  let close3 = document.querySelector(".close3");
  let close4 = document.querySelector (".close4");
+ let close5 = document.querySelector (".close5");
 
  btnOpen.addEventListener("click", (e)=>{
   e.preventDefault();
@@ -108,4 +111,34 @@ window.onscroll = (e) =>{
  close4.addEventListener("click", () =>{
   btnOopen4.style.display = "inline";
   box4.style.display = "none";
+ });
+
+  btnOpen5.addEventListener("click", (e)=>{
+  e.preventDefault();
+  btnOpen5.style.display="none";
+  box5.style.display="block";
+ });
+ close5.addEventListener("click", ()=>{
+  btnOpen5.style.display="inline";
+  box5.style.display="none";
+ });
+
+ /* ============== for profile image ===============*/
+ 
+ const imgDiv = document.querySelector(".user-image");
+ const img = document.querySelector("#photo");
+ const file  = document.querySelector("#file");
+ const uploadbtn = document.querySelector("#uploadbtn");
+
+ file.addEventListener("change", function(){
+  const chosedfile = this.files[0];
+
+  if(chosedfile){
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function(){
+      img.setAttribute("src", reader.result);
+    });
+    reader.readAsDataURL(chosedfile);
+  };
  });

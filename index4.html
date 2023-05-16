@@ -6,75 +6,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reach Transit</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style4.css">
  
 </head>
 <body>
   <header class="header" id="header">
-    <a href=""><span class="logo"><img src="images/Group 1.png" alt=""> <span>Reach Transit</span></span></a>
+     <a href=""><span class="logo"><img src="images/Group 1.png" alt=""> <span>Reach Transit</span></span></a>
     <i class="bx bx-menu" id="menu-icon"></i>
     <nav class="topnav">
       <a href="#about" class="topnav-a">About Us</a>
-      <a href="#booking" class="topnav-a">Way Bill</a>
+      <button class="btnOpen">Travel History</button>     
+      <a href="index3.html" class="topnav-a">Hire</a>
+      <a href="index4.html" class="topnav-a">Way Bill</a>
       <a href="#booking" class="topnav-a">Tickets</a>
       <a href="#footer" class="topnav-a">Contact</a>
-      <button class="btnOpen">Sign up/Login</button>
-      <section class="box">
-        <div class="form">
-          <div class="close">&times;</div>
-          <div class="phones">
-            
-          <p>Social media shared today, tomorrow or by location</p>
-            <span><img src="images/Group 9048.png" alt=""></span>
-          </div>
-    
-          <div class="form-body">
-            <div class="-0rm-logo">
-              <img src="images/Group 1.png" alt="">
-            </div>
-            <h1>Create Account</h1>
-            <p>To Track your Trips</p>
-    
-            <div class="form-content">
-              <form>
-                <div class="form-box">
-                  <input type="text"  class="form-imput" placeholder="Full Name"> 
-                  <input type="text" class="form-imput" placeholder="location"> 
-                </div>
       
-                <div class="form-box">
-                  <input type="text"class="form-imput" placeholder="Enter Email"> 
-                  <input type="date" class="form-imput" placeholder="Date"> 
-                </div>
+      <button class="btnOpen4"><img src="images/Ellipse 80.png" alt=""></button>
+      <section class="box4">
       
-                <div class="form-box" >
-                  <input type="password" class="form-imput" placeholder="Enter Password"> 
-                  <input type="password"  class="form-imput" placeholder="Confirm Password"> 
-                </div>
-                <div class="check">
-                  <div>
-                    <ul><input type="checkbox">Remember Me</ul>
-                    <ul><input type="checkbox">I agree to the <a href="#" class="form-a">Terms</a> and <a href="#" class="form-a">Privacy Policy</a></ul>
-                  </div>
-      
-                  <p><a href="#" class="form-a">Forgot Password?</a></p>
-                </div>
-                <div class="button">
-                  <button class="button-one"><a href="index2.html">Create Account</a></button>
-                  <button class="button-two"><img src="images/iconfinder_Google_1298745 1.svg" alt=""> Sign-in-with-google</button>
-                </div>
-      
-                <p class="already">Already have an account? <a href="index2.html" class="form-a">Login</a></p>
-              </div>
-      
-              <div class="store-image">
-                <img src="images/Buttns.png" alt="">
-              </div>
-              </form>
-            </div>
+        <div class="close4">&times;</div>
+        <div class="profile-text">
+          <i class='bx bx-chevron-left'></i>
+          <span>Profile</span>
         </div>
+
+        <div class="profile-image">
+          <div class="user-image">
+            <img src="images/Ellipse 80.png" id="photo" alt="">
+            <input type="file" id="file">
+            <label for="file" id="uploadbtn"><i class='bx bxs-camera'></i></label>
+          </div>
+          <div>Jeff Doe <br><span>Last trip 4/04/2023</span></div>
+          <div class="verified">Verified</div>
+        </div>
+
+        <div class="profile-content">
+          <div class="profile-input">
+            <p>EMAIL ADDRESS</p>
+            <input type="email" placeholder="JaneDoe@gmail.com">
+          </div>
+
+          <div class="profile-input">
+            <p>EMAIL ADDRESS</p>
+            <input type="password" placeholder="**********">
+          </div>
+
+          <div class="profile-input">
+            <p>Phone number</p>
+            <input type="number" placeholder="+234 903 9556 992">
+          </div>
+
+          <div class="profile-input">
+            <p>City</p>
+            <input type="text" placeholder=" Jos Nigeria  ">
+          </div>
+        </div>
+
+        <div class="profile-bottom">
+          <p>
+            <button class="btnOpen5">Add next of Kin</button>
+            <section class="box5">
+      
+              <div class="close5"><i class='bx bx-check-double'></i></div>
+              <div class="profile-text1">
+                <span>
+                  <i class='bx bx-chevron-left'></i>Next of kin info
+                </span>
+              </div>
+      
+              <div class="profile-content1">
+                <div class="profile-input1">
+                  <p>EMAIL ADDRESS</p>
+                  <input type="email" placeholder="JaneDoe@gmail.com">
+                </div>
+      
+                <div class="profile-input1">
+                  <p>EMAIL ADDRESS</p>
+                  <input type="password" placeholder="**********">
+                </div>
+      
+                <div class="profile-input1">
+                  <p>Phone number</p>
+                  <input type="number" placeholder="+234 903 9556 992">
+                </div>
+      
+                <div class="profile-input1">
+                  <p>City</p>
+                  <input type="text" placeholder=" Jos Nigeria  ">
+                </div>
+              </di>
+              
+            </section>
+          </p>
+
+          <p class="a"><a href="index.html">Log Out</a></p>
+        </div>
+        
       </section>
+      <section class="box">
+        <nav class="travel-header">
+          <span>Travel History</span>
+        </nav>
+          <div class="close">&times;</div>
+            <div class="travel-content">
+              <div class="travel-box">
+                <div class="travel-item">
+                  <div class="travel-text">
+                    
+                    <p>Order ID:1134178kk12<br>20/12/22</p>
+        
+                    <p class="lagos"><img src="images/truck.png" alt="">Lagos <img src="images/Group 58.png" alt="">Abuja</p>
+                  </div>
+                  <div class="travel-text">
+                    <h2>Bus Travel</h2>
+                    <img src="images/Group 9046.png" alt="">
+                    <h3>718km</h3>
+                  </div>
+                </div>
+        
+                <div class="hours">
+                  14 hours
+                </div>
+        
+                <p class="details">See Full Details</p>
+              </div>
+        
+              <div class="travel-box">
+                <div class="travel-item">
+                  <div class="travel-text">
+                    
+                    <p>Order ID:1134178kk12<br>20/12/22</p>
+        
+                    <p class="lagos"><img src="images/truck.png" alt="">Lagos <img src="images/Group 58.png" alt="">Abuja</p>
+                  </div>
+                  <div class="travel-text">
+                    <h2>Bus Travel</h2>
+                    <img src="images/material-symbols_cancel.png" alt="">
+                    <h3>718km</h3>
+                  </div>
+                </div>
+        
+                <div class="hours">
+                  14 hours
+                </div>
+        
+                <p class="details">See Full Details</p>
+              </div>
+        
+              <div class="travel-box">
+                <div class="travel-item">
+                  <div class="travel-text">
+                    <p>Order ID:1134178kk12<br>20/12/22</p>
+                    <p class="lagos"><img src="images/truck.png" alt="">Lagos <img src="images/Group 58.png" alt="">Abuja</p>
+                  </div>
+                  <div class="travel-text">
+                    <h3>Bus Travel</h3>
+                    <img src="images/mark.png" alt="">
+                    <h3>718km</h3>
+                  </div>
+                </div>
+        
+                <div class="hours">
+                  14 hours
+                </div>
+        
+                <p class="details">See Full Details</p>
+              </div>
+        
+              <div class="travel-box">
+                <div class="travel-item">
+                  <div class="travel-text">
+                    
+                    <p>Order ID:1134178kk12<br>20/12/22</p>
+        
+                    <p class="lagos"><img src="images/truck.png" alt="">Lagos <img src="images/Group 58.png" alt="">Abuja</p>
+                  </div>
+                  <div class="travel-text">
+                    <h2>Bus Travel</h2>
+                    
+                    <img src="images/Group 9046.png" alt="">
+                    <h3>718km</h3>
+                  </div>
+                </div>
+        
+                <div class="hours">
+                  14 hours
+                </div>
+        
+                <p class="details">See Full Details</p>
+              </div>
+            </div>
+      </section>   
     </nav>
   </header>
   <main>
@@ -93,8 +217,7 @@
   
           <div class="form-body">
             <form action="">
-              <div>
-                <h3>From:</h3>
+              <h3>From:</h3>
               <select class="city">
                 <option value="Abia">Abia</option>
                 <option value="Adamawa">Adamawa</option>
@@ -133,9 +256,7 @@
                 <option value="Yobe">Yobe</option>
                 <option value="Zamfara">Zamfara</option>
               </select>
-              </div>
     
-             <div>
               <h3>To:</h3>
               <select class="city">
                 <option value="Abia">Abia</option>
@@ -176,12 +297,10 @@
                 <option value="Yobe">Yobe</option>
                 <option value="Zamfara">Zamfara</option>
               </select>
-             </div>
     
-             <div>
               <h3>Departure Date:</h3>
               <input type="date" class="city">
-             </div>
+              
               <button class="btnOpen1">Check Availability</button>
               <section class="box1">
 
@@ -514,5 +633,6 @@
 
 
 <script defer src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
 </html>

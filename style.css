@@ -260,7 +260,7 @@ section{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80vw;
+  width: 85vw;
   height: 50vh;
   background-color: var(--white-color);
   color: var(--black-color);
@@ -271,7 +271,8 @@ section{
   box-shadow: 0px 24px 48px -12px rgba(14, 18, 26, 0.18);
 }
 .available .img-container{
-  width: 50vw;
+  width: 55rem;
+  margin-right: 8rem;
 }
 .available .img-container img{
   width: 100%;
@@ -645,23 +646,6 @@ section{
   justify-content: center;
   align-items: center;
 }
-.feedback-next{
-  background-color: var(--white-color);
-  color: var(--red-color);
-  font-weight: 700;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  box-shadow: 5px 4px 20px  rgb(203, 203, 203);
-  width: 3rem;
-  text-align: center;
-  padding: .5rem;
-  margin: .5rem;
-  transition: .5s ease;
-  cursor: pointer;
-}
-.feedback-next:hover{
-  transform: scale(1.02);
-}
 .feedback-box{
   margin: .5rem;
   padding: 1rem;
@@ -686,8 +670,17 @@ section{
   font-size: 1rem;
 }
 .feedback-box .image{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.feedback-box #image{
+  display: flex;
+  align-items: center;
+  padding-top: 3.5rem;
+  gap: 1rem;
 }
 .convenience{
   background-image: url(images/Rectangle\ 3675.png);
@@ -822,10 +815,12 @@ section{
   cursor: pointer;
 }
 
-/* ==============for travel=============== */
-
 /* ============= Responsivity @ media screens ============= */
 @media (max-width:1200px){
+  .available .img-container{
+    width: 400px;
+    margin-right: 1rem;
+  }
   .home-content .travel{
     padding-top: 10rem;
     color: var(--white-color);
@@ -838,7 +833,13 @@ section{
     min-height: 90vh;
     padding: 2rem 8% 2rem;
   }
-
+  .fleet-box{
+    margin: 1rem;
+  }
+  .fleet-box img{
+    width: 6rem;
+    padding:0;
+  }
   .feedback-box p{
     font-size: .9rem;
   }
@@ -860,9 +861,12 @@ section{
   .home-content .conf{
     display: inline;
   }
+  .fleet-box{
+    margin: 0;
+  }
   .fleet-box img{
     width: 8rem;
-    padding: 2rem;
+    padding: 1rem;
   }
   .available .img-container img{
     width: 20rem;
@@ -873,7 +877,7 @@ section{
     line-height: 2;
   }
   .available form .city{
-    width: 10rem;
+    width: 15rem;
     padding: .6rem;
     margin-right: 1rem;
     border: .2rem solid var(--red-color);
@@ -904,11 +908,32 @@ section{
   }
 }
 @media(max-width:840px){
+  .available{
+    width: 82vw;
+    margin: 0;
+  }
+  .available .img-container img{
+    width: 15rem;
+    border-radius: 0;
+  }
   .available form h3{
     font-size: 1rem;
     line-height: 2;
   }
-  
+  .available form .city{
+    width: 15rem;
+    padding: .6rem;
+    margin-right: 1rem;
+    border: .2rem solid var(--red-color);
+    border-radius: .3rem;
+    outline: none;
+    cursor: pointer;
+  }
+  .available form .city option{
+    color: var(--black-color);
+    font-size: .8rem;
+    padding: 1rem;
+  }
   .fleet-contents{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -962,6 +987,9 @@ section{
   }
 }
 @media (max-width: 785px){
+  .ul-bg{
+    background-size: contain;
+  }
   #menu-icon{
     display: block;
     font-size: 2em;
@@ -985,7 +1013,72 @@ section{
     font-size: 2rem;
     margin: 3rem 0;
   }
+   .box{
+    position: absolute;
+    border-radius: 12px;
+    width: 100%;
+    margin: 0;
+    padding: 4rem;
+    display: none;
+    
+  }
+  .form .phones{
+    display: none;
+  }
+  .form-body{
+    width: 1rem;
+    background-color: var(--white-color);
+    padding: 1.7rem;
+    margin: 0;
+  }
   
+  
+  .form-content .form-box .form-imput{
+    width: 20rem;
+    padding: .6rem;
+    margin: 0 0 .5rem 0;
+  }
+  .check{
+    display: grid;
+    font-size: 1rem;
+    margin-left: 2.5rem;
+    margin-bottom: 0;
+  }
+  .check ul{
+    padding: 0 0 .5rem 0;
+  }
+  .check p{
+    padding-right: 7rem;
+  }
+  .close{
+    color: var(--black-color);
+    padding: .5rem;
+  }
+  .button .button-one{
+    width: 20rem;
+  }
+  .button .button-two{
+    width: 20rem;
+    margin-top: 1rem;
+  }
+  .already{
+    padding: 0;
+    margin-left: 4rem;
+  }
+  .store-image {
+    width: 1rem;
+    margin: 0;
+  }
+  .available{
+    min-height: 60vh;
+  }
+  .available form{
+    min-width: 20vh;
+  }
+  .feedback-box{
+    font-size: 80%;
+    width: 18rem;
+  }
 }
 @media(max-width:500px){
   .header{
