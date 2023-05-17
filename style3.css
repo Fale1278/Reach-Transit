@@ -935,12 +935,12 @@ section{
   text-align: center;
   cursor: pointer;
 }
-.footer-box button img{
-  width: 2.5rem;
+.footer-box button i{
+  font-size: 2rem;
   transition: .5s ease;
 }
-.footer-box button img:hover{
-  transform: scale(2);
+.footer-box button i:hover{
+  transform: scale(1.1);
 }
 
 .footer-box p .links i{

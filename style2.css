@@ -490,7 +490,7 @@ section{
   font-size: 1rem;  
   padding-bottom: 2rema;
 }
-.box1 .detail-content .detail-box a{
+.box1 .detail-content .detail-box a{ 
   color: #007AFF;
   text-decoration: none;
   font-size: .9rem;
@@ -935,12 +935,12 @@ section{
   text-align: center;
   cursor: pointer;
 }
-.footer-box button img{
-  width: 2.5rem;
+.footer-box button i{
+  font-size: 2rem;
   transition: .5s ease;
 }
-.footer-box button img:hover{
-  transform: scale(2);
+.footer-box button i:hover{
+  transform: scale(1.1);
 }
 
 .footer-box p .links i{
