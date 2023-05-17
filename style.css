@@ -1161,7 +1161,7 @@ section{
     margin: 0;
     padding: 1rem;
   }
-  .available form h3{
+  .available form h3{ 
     font-size: 1rem;
     line-height: 2;
   }
@@ -1169,7 +1169,14 @@ section{
     width: 100%;
     padding: .6rem;
   }
- 
+  .available .img-container{
+    width: 20rem;
+  }
+  .available .img-container img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+ }
   .form-body{
     width: 100%;
     margin: 0;

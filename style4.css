@@ -448,11 +448,11 @@ section{
 .box1{
   background: var(--white-color);
   position: absolute;
-  margin-top: 25rem;
-  margin-left: 8rem;
-  padding-top: 5rem;
+  margin-top: 27rem;
+  margin-left: 5rem;
+  padding: 4rem 0  4rem 4rem;
   display: none;
-  min-height: 80vh; 
+  min-height: 70vh; 
   box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
 }
 .box1 .check-content{
@@ -468,6 +468,7 @@ section{
   color: var(--red-color);
   font-weight: 700;
   font-size: 1rem;
+  padding-bottom: 1rem;
 }
 .box1 .check-content .check-box p{
   padding: 5px;
@@ -478,27 +479,28 @@ section{
   font-size: .8rem;
   border-radius: .5rem;
   padding: .6rem;
-  width: 14.5rem;
+  width: 15rem;
 
 }
 .box1 .detail-content{
   display: grid;
-  grid-template-columns: repeat(5, 1fr );
+  grid-template-columns: repeat(3, 1fr );
 }
 .box1 .detail-content .detail-box{
   padding: 2rem 0 0 0;
 }
 .box1 .detail-content .detail-box p{
-  color: var(--gray-color);
-  font-size: 1rem;  
+  color: var(--black-color);
+  font-size: .8rem;  
   padding-bottom: 2rema;
 }
-.box1 .detail-content .detail-box a{
-  color: #007AFF;
-  text-decoration: none;
+.box1 .detail-content .detail-box input{
+  border-radius: 5px;
+  width: 15rem;
+  border: 1px solid var(--gray-color);
+  padding: .7rem;
+  outline: none;
   font-size: .9rem;
-  margin: 0;
-  padding: 0;
 }
 
 .box1 .detail-content .detail-box .thick{
@@ -512,10 +514,37 @@ section{
   font-size: .8rem;
   color: var(--black-color);
 }
-.box1 .btn-pay{
-  float: right;
+.waybill-content{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
 }
-.box1  input{
+.waybill-box{
+  text-align: center;
+  margin-right: 1rem;
+}
+.waybill-box p{ 
+  padding-bottom: 2rem;
+  font-size: .9rem;
+  color: var(--gray-color);
+}
+.waybill-box a{ 
+  padding-bottom: 1rem;
+  font-size: .8rem;
+  text-decoration: none;
+  color: #007AFF;
+}
+.waybill-box textarea{
+  background: #a5a5a5;
+  color: var(--black-color);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.waybill-box textarea::placeholder{
+  color: var(--black-color);
+}
+.btn-pay  input{
   width: 10rem;
   outline: none;
   display: block;
@@ -523,7 +552,7 @@ section{
   margin-top: 0.5rem;
   border: 1px solid var(--gray-color);
 }
-.box1  input:hover{
+.btn-pay  input:hover{
   border: 1px solid #007AFF;
   transition: .8s ease;
 }
