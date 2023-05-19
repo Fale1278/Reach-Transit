@@ -1212,6 +1212,17 @@ section{
   .profile-bottom a{
     color: var(--red-color);
   }
+  .box5{
+    margin: 1rem;
+    width: 20rem;
+    overflow-x: hidden;
+  }
+  .profile-content1{
+    display: block;
+  }
+  .profile-content1 .profile-input1 input{
+    width: 15rem;
+  }
   .close4{
     margin-left: 18rem;
   }

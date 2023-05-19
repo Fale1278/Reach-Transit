@@ -1216,6 +1216,17 @@ section{
   .close4{
     margin-left: 18rem;
   }
+  .box5{
+    margin: 1rem;
+    width: 20rem;
+    overflow-x: hidden;
+  }
+  .profile-content1{
+    display: block;
+  }
+  .profile-content1 .profile-input1 input{
+    width: 15rem;
+  }
   .hours{
     color: #0267d3;
     border-bottom: 5px dashed var(--black-color);
