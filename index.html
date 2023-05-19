@@ -39,18 +39,18 @@
             <div class="form-content">
               <form>
                 <div class="form-box">
-                  <input type="text"  class="form-imput" placeholder="Full Name"> 
+                  <input type="text"  class="form-imput" placeholder="Full Name" id="username"> 
                   <input type="text" class="form-imput" placeholder="location"> 
                 </div>
       
                 <div class="form-box">
-                  <input type="text"class="form-imput" placeholder="Enter Email"> 
-                  <input type="date" class="form-imput" placeholder="Date"> 
+                  <input type="email"class="form-imput" placeholder="Enter Email" id="email"> 
+                  <input type="date" class="form-imput" placeholder="Date" id="date"> 
                 </div>
       
                 <div class="form-box" >
-                  <input type="password" class="form-imput" placeholder="Enter Password"> 
-                  <input type="password"  class="form-imput" placeholder="Confirm Password"> 
+                  <input type="password" class="form-imput" placeholder="Enter Password" id="password"> 
+                  <input type="password"  class="form-imput" placeholder="Confirm Password" id="cpassword"> 
                 </div>
                 <div class="check">
                   <div>
@@ -61,7 +61,7 @@
                   <p><a href="#" class="form-a">Forgot Password?</a></p>
                 </div>
                 <div class="button">
-                  <button class="button-one"><a href="index2.html">Create Account</a></button>
+                  <a onclick="handleRegister()" class="button-one">Create Account</a>
                   <button class="button-two"><img src="images/iconfinder_Google_1298745 1.svg" alt=""> Sign-in-with-google</button>
                 </div>
       
@@ -514,5 +514,6 @@
 
 
 <script defer src="script.js"></script>
+<script src="api.js"></script>
 </body>
 </html>

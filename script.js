@@ -1,4 +1,3 @@
-
 /*=============== t0ggle icon topnav =============*/
 let menuIcon = document.querySelector("#menu-icon");
 let topnav = document.querySelector(".topnav");
@@ -8,36 +7,7 @@ menuIcon.onclick = () =>{
   topnav.classList.toggle('active');
 }
 
-/* ================ scroll section active link ===================*/
-let sections = document.querySelector('section');
-let navLinks = document.querySelector("header nav a");
 
-window.onscroll = (e) =>{
-  e.preventDefault();
-  sections.for(sec => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop -150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute ('id');
-
-    if (top >= offset && top < offset + height){
-      navLinks.for(links => {
-        links.classList.remove('active');
-        document.querySelector('header nav a[href*= '+ id +']').classList.add('active');
-      });
-    };
-  });
-
-  /* ============== sticky topnav ==============*/
-  let header = document.querySelector('header');
-
-  header.classList.toggle('sticky', window.scrollY > 100);
-
-
-  menuIcon.classList.remove('bx-x');
-  topnav.classList.tremove('active');
-
-};
 
 /* =============== button open for login ==============*/
  let btnOpen = document.querySelector(".btnOpen");
@@ -102,11 +72,12 @@ window.onscroll = (e) =>{
   box3.style.display="none";
  });
 
- btnOopen4.addEventListener("click", (e) =>{
+ btnOopen4.addEventListener("click", (e)=>{
   e.preventDefault();
-  btnOopen4.style.display = "none";
-  box4.style.display = "block";
+  btnOopen4.style.display="none";
+  box4.style.display="block";
  });
+
 
  close4.addEventListener("click", () =>{
   btnOopen4.style.display = "inline";

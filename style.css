@@ -1070,19 +1070,11 @@ section{
     margin: 0;
   }
   .available{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   overflow: hidden;
-  width: 85vw;
-  height: 50vh;
-  background-color: var(--white-color);
-  color: var(--black-color);
   margin-top: 4rem;
   margin-left: 1rem;
   border-radius: 1rem;
   padding-right: 25rem;
-  box-shadow: 0px 24px 48px -12px rgba(14, 18, 26, 0.18);
 }
   .available form{
     min-width: 20vh;
