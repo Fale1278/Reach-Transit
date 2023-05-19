@@ -30,7 +30,7 @@ section{
 .header{
   background-color: var(--white-color);
   box-shadow: 0px 5px 15px  rgba(14, 18, 26, 0.18);
-  padding: 1rem 6%;
+  padding: .5rem 6%;
   position: fixed;
   width: 100%;
   display: flex;
@@ -73,6 +73,7 @@ section{
   font-family: var(--font-family);
   font-weight: 700;
   transition: .5s ease;
+  text-align: center;
 }
 .header .topnav .topnav-a:hover{
   color: var(--red-color);
@@ -98,9 +99,14 @@ section{
   transition: .5s ease-out;
 }
 .btnOpen4{
-  background: none;
-  border: none;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.btnOpen4 img{
+  width: 3rem;
   padding-left: 1rem;
+  box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
 }
 .box4{
   background: var(--white-color);
