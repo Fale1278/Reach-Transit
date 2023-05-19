@@ -5,12 +5,12 @@ const password = document.getElementById("password");
 const cpassword = document.getElementById("cpassword");
 
 function handleRegister() {
-  // console.log(
-  //   username.value,
-  //   email.value,
-  //   password.value,
-  // );
-  
+  // ... existing code
+  console.log(
+    username.value,
+    email.value,
+    password.value,
+  );
 
   fetch("https://reach-0hh4.onrender.com/authenticationRoute/register", {
     method: "POST",
@@ -24,6 +24,11 @@ function handleRegister() {
     }),
   })
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data);
+      if (data.success) {
+        window.location.href = 'index2.html';
+      }
+    })
     .catch((err) => console.log(err));
 }

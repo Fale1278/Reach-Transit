@@ -200,10 +200,9 @@ section{
   margin: 1rem 0 1rem 0;
 }
 .button .button-one{
-  background-color: #007AFF;
+  background: #007AFF;
   color: var(--white-color);
   border: none;
-  width: 15rem;
   padding: .6rem;
   border-radius: 5px;
   transition: .5s ease;
