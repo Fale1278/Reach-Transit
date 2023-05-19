@@ -203,6 +203,7 @@ section{
   background: #007AFF;
   color: var(--white-color);
   border: none;
+  width: 15rem;
   padding: .6rem;
   border-radius: 5px;
   transition: .5s ease;
