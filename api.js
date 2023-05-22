@@ -62,28 +62,36 @@ function handlerLogin() {
 }
 
 // For handling Availability
-function handlerAvailability() {
-  console.log(
-    fromCity.value,
-    toCity.value,
-    departureDate.value
-  );
+function handleAvailability() {
+  // Retrieve the <select> elements and input element by their ids
+  const fromCity = document.getElementById('fromCity');
+  const toCity = document.getElementById('toCity');
+  const departureDate = document.getElementById('departureDate');
 
+  // Retrieve the selected values
+  const selectedFromCity = fromCity.value;
+  const selectedToCity = toCity.value;
+  const selectedDepartureDate = departureDate.value;
+
+  console.log(selectedFromCity, selectedToCity, selectedDepartureDate);
+
+  // Send a POST request to the server
   fetch("https://reach-0hh4.onrender.com/tripRoute", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      from: fromCity.value,
-      toCity: toCity.value,
-      departureDate: departureDate.value
+      name: selectedFromCity,
+      time: selectedToCity,
+      date: selectedDepartureDate
     })
   })
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
       if (data.success) {
+        // Redirect to index2.html if the request was successful
         window.location.href = 'index2.html';
       }
     })
