@@ -1,115 +1,57 @@
-/*=============== t0ggle icon topnav =============*/
-let menuIcon = document.querySelector("#menu-icon");
-let topnav = document.querySelector(".topnav");
+const getElement = (selector) => document.querySelector(selector);
+const getElements = (selector) => document.querySelectorAll(selector);
 
-menuIcon.onclick = () =>{
+// Toggle icon and topnav
+const menuIcon = getElement("#menu-icon");
+const topnav = getElement(".topnav");
+
+menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle('bx-x');
   topnav.classList.toggle('active');
-}
+});
 
+// Open and close buttons for login
+const openClosePairs = [
+  { open: ".btnOpen", close: ".close", box: ".box" },
+  { open: ".btnOpen1", close: ".close1", box: ".box1" },
+  { open: ".btnOpen2", close: ".close2", box: ".box2" },
+  { open: ".btnOpen3", close: ".close3", box: ".box3" },
+  { open: ".btnOpen4", close: ".close4", box: ".box4" },
+  { open: ".btnOpen5", close: ".close5", box: ".box5" },
+];
 
+openClosePairs.forEach((pair) => {
+  const openBtn = getElement(pair.open);
+  const closeBtn = getElement(pair.close);
+  const box = getElement(pair.box);
 
-/* =============== button open for login ==============*/
- let btnOpen = document.querySelector(".btnOpen");
- let btnOpen1 = document.querySelector(".btnOpen1");
- let btnOpen2 = document.querySelector(".btnOpen2"); 
- let btnOpen3 = document.querySelector(".btnOpen3");
- let btnOopen4 = document.querySelector(".btnOpen4");
- let btnOpen5 = document.querySelector(".btnOpen5");
- let box = document.querySelector(".box");
- let box1 = document.querySelector(".box1");
- let box2 = document.querySelector(".box2");
- let box3 = document.querySelector(".box3");
- let box4 = document.querySelector(".box4");
- let box5 = document.querySelector(".box5");
- let close = document.querySelector(".close");
- let close1 = document.querySelector(".close1");
- let close2 = document.querySelector(".close2");
- let close3 = document.querySelector(".close3");
- let close4 = document.querySelector (".close4");
- let close5 = document.querySelector (".close5");
+  openBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    openBtn.style.display = "none";
+    box.style.display = "block";
+  });
 
- btnOpen.addEventListener("click", (e)=>{
-  e.preventDefault();
-  btnOpen.style.display="none";
-  box.style.display="block";
- });
- close.addEventListener("click", ()=>{
-  btnOpen.style.display="inline";
-  box.style.display="none";
- });
+  closeBtn.addEventListener("click", () => {
+    openBtn.style.display = "inline";
+    box.style.display = "none";
+  });
+});
 
- btnOpen1.addEventListener("click", (e)=>{
-  e.preventDefault();
-  btnOpen1.style.display="none";
-  box1.style.display="block";
- });
+// Profile image upload
+const imgDiv = getElement(".user-image");
+const img = getElement("#photo");
+const file = getElement("#file");
 
- close1.addEventListener("click", ()=>{
-  btnOpen1.style.display="inline";
-  box1.style.display="none";
- });
+file.addEventListener("change", function () {
+  const chosenFile = this.files[0];
 
- btnOpen2.addEventListener("click", (e)=>{
-  e.preventDefault();
-  btnOpen2.style.display="none";
-  box2.style.display="block";
- });
-
- close2.addEventListener("click", ()=>{
-  btnOpen2.style.display="inline";
-  box2.style.display="none";
- });
- 
- btnOpen3.addEventListener("click", (e)=>{
-  e.preventDefault();
-  btnOpen3.style.display="none";
-  box3.style.display="block";
- });
-
- close3.addEventListener("click", ()=>{
-  btnOpen3.style.display="inline";
-  box3.style.display="none";
- });
-
- btnOopen4.addEventListener("click", (e)=>{
-  e.preventDefault();
-  btnOopen4.style.display="none";
-  box4.style.display="block";
- });
-
-
- close4.addEventListener("click", () =>{
-  btnOopen4.style.display = "inline";
-  box4.style.display = "none";
- });
-
-  btnOpen5.addEventListener("click", (e)=>{
-  e.preventDefault();
-  btnOpen5.style.display="none";
-  box5.style.display="block";
- });
- close5.addEventListener("click", ()=>{
-  btnOpen5.style.display="inline";
-  box5.style.display="none";
- });
-
- /* ============== for profile image ===============*/
- 
- const imgDiv = document.querySelector(".user-image");
- const img = document.querySelector("#photo");
- const file  = document.querySelector("#file");
- const uploadbtn = document.querySelector("#uploadbtn");
-
- file.addEventListener("change", function(){
-  const chosedfile = this.files[0];
-
-  if(chosedfile){
+  if (chosenFile) {
     const reader = new FileReader();
 
-    reader.addEventListener("load", function(){
+    reader.addEventListener("load", function () {
       img.setAttribute("src", reader.result);
     });
-    reader.readAsDataURL(chosedfile);
-  };
- });
+
+    reader.readAsDataURL(chosenFile);
+  }
+});

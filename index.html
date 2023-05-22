@@ -60,7 +60,7 @@
                   <p><a href="#" class="form-a">Forgot Password?</a></p>
                 </div>
                 <div class="button">
-                  <button onclick="handleRegister()" class="button-one">Create Account</button>
+                  <a onclick="handleRegister()" class="button-one">Create Account</a>
                   <button class="button-two"><img src="images/iconfinder_Google_1298745 1.svg" alt=""> Sign-in-with-google</button>
                 </div>
       
@@ -181,8 +181,8 @@
               <h3>Departure Date:</h3>
               <input type="date" class="city" id="departureDate">
              </div>
-             <button class="btnOpen1" onclick="handleBooking()">Check Availability</button>
-              <section class="box1" id="bookingHistory">
+              <button class="btnOpen1" onclick="handleAvailability()">Check Availability</button>
+              <section class="box1">
 
                   <div class="close1"><i class='bx bx-x'></i></div>
                   <div class="check-body">
@@ -512,7 +512,7 @@
   <footer>
 
 
-<script defer src="script.js"></script>
 <script src="api.js"></script>
+<script defer src="script.js"></script>
 </body>
 </html>
