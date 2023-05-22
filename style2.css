@@ -64,7 +64,14 @@ section{
   color: var(--font-first-color);
   display: none;
 }
+.header .topnav .list{
+  display: flex;justify-content: center;
+  align-items: center;
+}
+.header .topnav li{
+  list-style: none;
 
+}
 .header .topnav .topnav-a{
   text-decoration: none;
   color: var(--black-color);
@@ -86,7 +93,6 @@ section{
   color: var(--black-color);
   font-size: .9rem;
   padding-left: 2rem;
-  padding-bottom: 1rem;
   font-family: var(--font-family);
   font-weight: 700;
   transition: .5s ease;
@@ -1117,6 +1123,9 @@ section{
     color: var(--red-color);
     cursor: pointer;
   }
+  .header .topnav .list{
+    display: block;
+  }
   .topnav{
     position: absolute;
     top: 100%;
@@ -1134,6 +1143,7 @@ section{
     font-size: 2rem;
     margin: 3rem 0;
   }
+  
   
 }
 @media(max-width:500px){

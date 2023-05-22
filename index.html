@@ -24,8 +24,7 @@
         <div class="form">
           <div class="close">&times;</div>
           <div class="phones">
-            
-          <p>Social media shared today, tomorrow or by location</p>
+            <p>Social media shared today, tomorrow or by location</p>
             <span><img src="images/Group 9048.png" alt=""></span>
           </div>
     
@@ -92,10 +91,10 @@
           </div>
   
           <div class="form-body">
-            <form action="">
+            <form action="" id="bookingForm">
               <div>
                 <h3>From:</h3>
-              <select class="city">
+              <select class="city" id="from">
                 <option value="Abia">Abia</option>
                 <option value="Adamawa">Adamawa</option>
                 <option value="AkwaIbom">Akwa Ibom</option>
@@ -137,7 +136,7 @@
     
              <div>
               <h3>To:</h3>
-              <select class="city">
+              <select class="city" id="toCity">
                 <option value="Abia">Abia</option>
                 <option value="Adamawa">Adamawa</option>
                 <option value="Adamawa">Abuja</option>
@@ -180,10 +179,10 @@
     
              <div>
               <h3>Departure Date:</h3>
-              <input type="date" class="city">
+              <input type="date" class="city" id="departureDate">
              </div>
-              <button class="btnOpen1">Check Availability</button>
-              <section class="box1">
+             <button class="btnOpen1" onclick="handleBooking()">Check Availability</button>
+              <section class="box1" id="bookingHistory">
 
                   <div class="close1"><i class='bx bx-x'></i></div>
                   <div class="check-body">

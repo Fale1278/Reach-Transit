@@ -200,7 +200,7 @@ section{
   margin: 1rem 0 1rem 0;
 }
 .button .button-one{
-  background: #007AFF;
+  background-color: #007AFF;
   color: var(--white-color);
   border: none;
   width: 15rem;
