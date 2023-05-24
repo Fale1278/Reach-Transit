@@ -355,7 +355,10 @@ section{
   color: var(--gray-color);
   font-size: 1rem;  
 }
-.box1 .detail-content .detail-box a{
+.box1 .detail-content .detail-box .changeCar{
+  background: none;
+  border: none;
+  outline: none;
   color: #007AFF;
   text-decoration: none;
   font-size: .9rem;

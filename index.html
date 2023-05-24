@@ -60,7 +60,7 @@
                   <p><a href="#" class="form-a">Forgot Password?</a></p>
                 </div>
                 <div class="button">
-                  <a onclick="handleRegister()" class="button-one">Create Account</a>
+                  <button onclick="handleRegister()" class="button-one">Create Account</button>
                   <button class="button-two"><img src="images/iconfinder_Google_1298745 1.svg" alt=""> Sign-in-with-google</button>
                 </div>
       
@@ -181,7 +181,7 @@
               <h3>Departure Date:</h3>
               <input type="date" class="city" id="departureDate">
              </div>
-              <button class="btnOpen1" onclick="handleAvailability()">Check Availability</button>
+              <button class="btnOpen1" onclick="handlerAvailability()">Check Availability</button>
               <section class="box1">
 
                   <div class="close1"><i class='bx bx-x'></i></div>
@@ -191,26 +191,36 @@
                     <div class="check-content">
                       <div class="check-box">
                         <p>From</p>
-                        <ul>Plateau</ul>
+                        <ul id="replaceFrom">Plateau</ul>
                       </div>
             
                       <div class="check-box">
                         <p>To</p>
-                        <ul class="place">Abuja</ul>
+                        <ul class="place" id="replaceTo">Abuja</ul>
                       </div>
             
                       <div class="check-box">
                         <p>Date</p>
-                        <ul>15/05/2023</ul>
+                        <ul id="replaceDate">15/05/2023</ul>
                       </div class="place">
                     </div>
                     
                     <div class="detail-content">
                       <div class="detail-box">
                         <p>Bus Type</p>
-                        <p class="thick">Toyota Hiace</p> 
                         <p class="others">AG, Non-Video(14 Seats)</p>
-                        <a href="#">Change Vehicle</a>
+                        <p>Change Vehicle
+                        <select id="changeCar">
+                          <option value="">-- Select --</option>
+                          <option value="audi">Audi</option>
+                          <option value="bmw">BMW</option>
+                          <option value="mercedes">Mercedes</option>
+                        </select>
+                        </p>
+                        <div id="car"></div>
+
+
+
                       </div>
             
                       <div class="detail-box">
@@ -512,7 +522,6 @@
   <footer>
 
 
-<script src="api.js"></script>
 <script defer src="script.js"></script>
 </body>
 </html>
