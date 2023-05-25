@@ -38,29 +38,30 @@
             <input type="file" id="file">
             <label for="file" id="uploadbtn"><i class='bx bxs-camera'></i></label>
           </div>
-          <div>Jeff Doe <br><span>Last trip 4/04/2023</span></div>
+          <div id="replaceUser">Jeff Doe <br><span>Last trip <span id="replaceDate"></span>
+          </span></div>
           <div class="verified">Verified</div>
         </div>
 
         <div class="profile-content">
           <div class="profile-input">
             <p>EMAIL ADDRESS</p>
-            <input type="email" placeholder="JaneDoe@gmail.com">
+            <input type="email" placeholder="JaneDoe@gmail.com" id="replaceEmail">
           </div>
 
           <div class="profile-input">
-            <p>EMAIL ADDRESS</p>
-            <input type="password" placeholder="**********">
+            <p>EMAIL PASSWORD</p>
+            <input type="password" placeholder="**********" id="replacePassword">
           </div>
 
           <div class="profile-input">
-            <p>Phone number</p>
-            <input type="number" placeholder="+234 903 9556 992">
+            <p>PHONE NUMBER</p>
+            <input type="number" placeholder="+234 903 9556 992" id="replacePassword">
           </div>
 
           <div class="profile-input">
-            <p>City</p>
-            <input type="text" placeholder=" Jos Nigeria  ">
+            <p>CITY</p>
+            <input type="text" placeholder=" Jos Nigeria  " id="replaceCity">
           </div>
         </div>
 
@@ -83,17 +84,17 @@
                 </div>
       
                 <div class="profile-input1">
-                  <p>EMAIL ADDRESS</p>
+                  <p>PASSWORD</p>
                   <input type="password" placeholder="**********">
                 </div>
       
                 <div class="profile-input1">
-                  <p>Phone number</p>
+                  <p>PHONE NUMBER</p>
                   <input type="number" placeholder="+234 903 9556 992">
                 </div>
       
                 <div class="profile-input1">
-                  <p>City</p>
+                  <p>CITY</p>
                   <input type="text" placeholder=" Jos Nigeria  ">
                 </div>
               </di>
@@ -216,9 +217,10 @@
           </div>
   
           <div class="form-body">
-            <form action="">
+            <form action="" id="bookingForm">
               <h3>From:</h3>
-              <select class="city">
+              <select class="city" id="from">
+                <option value="">--Select City--</option>
                 <option value="Abia">Abia</option>
                 <option value="Adamawa">Adamawa</option>
                 <option value="AkwaIbom">Akwa Ibom</option>
@@ -258,7 +260,8 @@
               </select>
     
               <h3>To:</h3>
-              <select class="city">
+              <select class="city" id="toCity">
+                <option value="">--Select City--</option>
                 <option value="Abia">Abia</option>
                 <option value="Adamawa">Adamawa</option>
                 <option value="Adamawa">Abuja</option>
@@ -299,9 +302,9 @@
               </select>
     
               <h3>Departure Date:</h3>
-              <input type="date" class="city">
+              <input type="date" class="city" id="departureDate">
               
-              <button class="btnOpen1">Book Vehicle</button>
+              <button class="btnOpen1" onclick="handlerAvailability()">Book Vehicle</button>
               <section class="box1">
 
                   <div class="close1"><i class='bx bx-x'></i></div>
@@ -311,17 +314,17 @@
                     <div class="check-content">
                       <div class="check-box">
                         <p>From</p>
-                        <ul>Plateau</ul>
+                        <ul id="replaceFrom"></ul>
                       </div>
             
                       <div class="check-box">
                         <p>To</p>
-                        <ul class="place">Abuja</ul>
+                        <ul class="place" id="replaceTo"></ul>
                       </div>
             
                       <div class="check-box">
                         <p>Date</p>
-                        <ul>15/05/2023</ul>
+                        <ul id="replaceDate2"></ul>
                       </div class="place">
                     </div>
                     
@@ -330,7 +333,15 @@
                         <p>Bus Type</p>
                         <p class="thick">Toyota Hiace</p> 
                         <p class="others">AG, Non-Video(14 Seats)</p>
-                        <a href="#">Change Vehicle</a>
+                        <a href="#">Change Vehicle
+                          <select name="" id="changeCar">
+                            <option value="">--Select--</option>
+                            <option value="">Toyota</option>
+                            <option value="">Audi</option>
+                            <option value="">Sienna</option>
+                            <option value="">Land Cruiser Prado</option>
+                          </select>
+                        </a>
                       </div>
             
                       <div class="detail-box">

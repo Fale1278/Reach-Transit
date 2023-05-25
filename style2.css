@@ -253,9 +253,8 @@ section{
   overflow-y: hidden;
 }
 .close5{
-  /* display: block; */
+  display: block;
   position: absolute;
-  float: right;
   width: 40px;
   height: 40px;
   margin-left: 43rem;
@@ -289,13 +288,16 @@ section{
   transform: scale(1.02);
 }
 .box{
-  background: var(--white-color);
   position: absolute;
-  margin-left: 8rem;
+  margin-left: 25rem;
+  display: none;;
+}
+.box-content{
+  background: var(--white-color);
+  padding: 1rem;
+  width: 50rem;
+  box-shadow: 0px 5px 15px  rgba(14, 18, 26, 0.18);
   border-bottom: 2rem solid var(--red-color);
-  display: none;
-  box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
-  overflow-y: hidden;
 }
 .travel-header{
   background-color: var(--white-color);
@@ -304,7 +306,7 @@ section{
   box-shadow: 0px 5px 15px  rgba(14, 18, 26, 0.18);
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .travel-content{
   display: grid;
@@ -314,9 +316,9 @@ section{
 .travel-box{
   border: 2px solid var(--red-color);
   padding: 1rem;
-  margin-top: 2rem;
-  margin-right: 3rem;
-  width: 25rem;
+  margin: 1rem;
+  width: 20rem;
+  height: 11rem;
   border-radius: 10px;
   box-shadow: 0px 5px 15px  rgba(14, 18, 26, 0.18);
   transition: .8s ease;
@@ -330,25 +332,28 @@ section{
   justify-content: space-between;
 }
 .travel-item .travel-text p{
-  font-size: .8rem;
-  line-height: 3;
+  font-size: .7rem;
+  line-height: 1;
 }
 .travel-item .travel-text .lagos{
   font-weight: 700;
-  font-size: .9rem;
+  font-size: .7rem;
+  padding: .2rem;
 }
 .travel-item .travel-text .lagos img{
   padding-right: 1rem;
   padding-left: 1rem;
 }
-.travel-item .travel-text  h3{
+.travel-item .travel-text  h2, h3{
   line-height: 2;
+  font-size: .9rem;
 }
 .hours{
   color: #0267d3;
   border-bottom: 5px dashed var(--black-color);
   border-bottom-width: 2px;
-  padding-bottom: 1rem;
+  padding-bottom: .7rem;
+  font-size: .8rem;
 }
 .details{
   text-align: center;
@@ -359,10 +364,7 @@ section{
 .close{
   display: block;
   position: absolute;
-  float: right;
-  width: 40px;
-  height: 40px;
-  padding: 1rem;
+  padding: 3rem 50rem;
   top: 0;
   right: 0;
   color: var(--black-color);
@@ -372,7 +374,7 @@ section{
 }
 .close:hover{
   color: var(--red-color);
-  transform: scale(1.5);
+  transform: scale(1.02);
 }
 
 .home-content .travel{
@@ -452,6 +454,7 @@ section{
 .box1{
   background: var(--white-color);
   position: absolute;
+  width: 70rem;
   margin-top: 25rem;
   margin-left: 8rem;
   padding-top: 5rem;
@@ -1148,7 +1151,16 @@ section{
 }
 @media(max-width:500px){
   .box{
-    margin-left: 0rem;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .box-content{ 
+    padding: 0;
+    margin: 1rem;
+    width: 21rem;
+    box-shadow: 0px 5px 15px  rgba(14, 18, 26, 0.18);
+    border-bottom: 2rem solid var(--red-color);
   }
   .travel-header{
     width: 20rem;
@@ -1164,7 +1176,7 @@ section{
     padding: .5rem;
     margin-top: .5rem;
     margin-bottom: .5rem;
-    width: 20rem;
+    width: 19rem;
   }
   .box4{
     background: var(--white-color);
@@ -1222,9 +1234,6 @@ section{
   }
   .profile-bottom a{
     color: var(--red-color);
-  }
-  .close4{
-    margin-left: 18rem;
   }
   .box5{
     margin: 1rem;
@@ -1304,6 +1313,25 @@ section{
   .box1 .btnOpen2{
     width: 18.3rem;
     margin: 2rem 0 0 0;
+  }
+  .close1{
+    float: none;
+    padding: .5rem 19rem;
+  }
+  .close2{
+    float: none;
+    padding: .5rem 19rem;
+    
+  }
+  .close2{
+    float: none;
+    padding: .5rem 19rem;
+    
+  }
+  .close{
+    float: none;
+    padding: .5rem 19rem;
+    
   }
   .box2{
     margin-top: 7rem;

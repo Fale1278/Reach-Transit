@@ -107,6 +107,8 @@ section{
   transition: .5s ease-out;
 }
 .btnOpen4 img{
+  background: none;
+  border: none;
   width: 3rem;
   padding-left: 1rem;
   box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
@@ -540,12 +542,39 @@ section{
   text-decoration: none;
   color: #007AFF;
 }
+.waybill-box img{
+  width: 10rem;
+}
 .waybill-box textarea{
   background: #a5a5a5;
   color: var(--black-color);
   border: none;
   border-radius: 5px;
   padding: 1rem;
+}
+.waybill-box #photo{
+  width: 10rem;
+  height: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  border: .2rem solid var(--gray-color);
+  box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
+
+}
+.waybill #file{
+  display: none;
+  margin: 0;
+  padding: 0;
+
+}
+.waybill-box #uploadbtn i{
+  font-size: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--gray-color);
+  transform: translateY(100%);
+  transform: translateX(-250%);
 }
 .waybill-box textarea::placeholder{
   color: var(--black-color);
@@ -1176,7 +1205,7 @@ section{
   }
   
 }
-@media(max-width:500px){
+@media(max-width:600px){
   .box{
     margin-left: 0rem;
   }
@@ -1314,8 +1343,9 @@ section{
     margin: 0;
   }
   .box1{
-    margin: 10rem 1rem 0 1rem; 
+    margin: 10rem 1rem; 
     padding-top: 3rem;
+    padding-left: 1rem;
     display: none;
     text-align: left;
     width: 21.5rem;
@@ -1324,15 +1354,17 @@ section{
     display: block;
   }
   .box1 .check-content .check-box ul{
-    width: 18.3rem;
+    width: 19.3rem;
   
   }
   .box1 .detail-content{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: block;
+  }
+  .box1 .detail-content .detail-box input{
+    width: 19.3rem;
   }
   .box1 .btnOpen2{
-    width: 18.3rem;
+    width: 19.3rem;
     margin: 2rem 0 0 0;
   }
   .box2{
@@ -1342,6 +1374,19 @@ section{
     display: none;
     min-height: 40vh; 
     box-shadow: 3px 24px 48px -2px rgba(0, 0, 0, 0.18);
+  }
+  .waybill-content{
+    display: block;
+  }
+  .waybill-box textarea{
+    width: 19.3rem;
+    height: 10rem;
+  }
+  .waybill-box p{
+    padding: 0;
+  }
+  .waybill a{
+    margin: 1rem;
   }
   .payment-content{
     display: block;

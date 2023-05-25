@@ -81,7 +81,7 @@ section{
 .header .topnav .btnOpen{
   background: var(--red-color);
   border-radius: .4rem;
-  border: none;
+  border: none; 
   padding: .6rem;
   margin-left: 1rem;
   font-weight: 700;
@@ -106,11 +106,11 @@ section{
   display: flex;
   background-color: var(--white-color);
   box-shadow: 1px 1px 1px 80px rgba(70, 70, 70, 0.8);
+  height: 35rem;
 }
 .form .phones{
   background-color: var(--red-color);
   width: 30rem;
-  height: 40rem;
   align-items: center;
 }
 .form .phones p{
@@ -121,7 +121,7 @@ section{
 }
 .form .phones img{
   width: 32rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 .form-body{
   width: 100%;
@@ -181,10 +181,9 @@ section{
 .close{
   display: block;
   position: absolute;
-  float: right;
   width: 40px;
   height: 40px;
-  padding: 1rem;
+  padding: 1rem  80rem;
   top: 0;
   right: 0;
   color: var(--white-color);
@@ -194,7 +193,7 @@ section{
 }
 .close:hover{
   color: var(--red-color);
-  transform: scale(1.5);
+  transform: scale(1.02);
 }
 .button{
   margin: 1rem 0 1rem 0;
@@ -404,7 +403,6 @@ section{
 .close1{
   display: block;
   position: absolute;
-  float: right;
   width: 40px;
   height: 40px;
   padding: 1rem;
@@ -417,7 +415,7 @@ section{
 }
 .close1:hover{
   color: var(--red-color);
-  transform: scale(1.5);
+  transform: scale(1.02);
 }
 .box2{
   background: var(--white-color);
@@ -1100,6 +1098,9 @@ section{
     display: none;
     
   }
+  .form{
+    height: 50rem;
+  }
   .form .phones{
     display: none;
   }
@@ -1130,7 +1131,8 @@ section{
   }
   .close{
     color: var(--black-color);
-    padding: .5rem;
+    padding: .5rem 20rem;
+
   }
   .button .button-one{
     width: 20rem;
@@ -1188,6 +1190,7 @@ section{
     width: 100%;
     margin: 0;
   }
+ 
   .box1{
     margin: 10rem 1rem 0 1rem; 
     padding-top: 3rem;
@@ -1217,6 +1220,15 @@ section{
     display: none;
     min-height: 40vh; 
     box-shadow: 3px 24px 48px -2px rgba(0, 0, 0, 0.18);
+  }
+  .close1{
+    float: none;
+    padding: .5rem 19rem;
+  }
+  .close2{
+    float: none;
+    padding: .5rem 19rem;
+    
   }
   .payment-content{
     display: block;
@@ -1292,7 +1304,8 @@ section{
     display: none;
   }
   .footer-content{
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
   .footer-box .input{
     width: 20rem;

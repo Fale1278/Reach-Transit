@@ -38,11 +38,16 @@ openClosePairs.forEach((pair) => {
 });
 
 // Profile image upload
-const imgDiv = getElement(".user-image");
-const img = getElement("#photo");
-const file = getElement("#file");
+// Get references to the elements
+// Get references to the elements
+const imgDiv = document.querySelector(".user-image");
+const img = document.querySelector("#photo");
+const fileInput = document.getElementById("file");
+const selectCam = document.querySelector(".user-image");
+const replaceCam = document.getElementById("replaceCam");
 
-file.addEventListener("change", function () {
+// Attach event listener to file input
+fileInput.addEventListener("change", function () {
   const chosenFile = this.files[0];
 
   if (chosenFile) {
@@ -54,23 +59,24 @@ file.addEventListener("change", function () {
 
     reader.readAsDataURL(chosenFile);
   }
+
+  const selectedCam = selectCam.options[selectCam.selectedIndex].text;
+  replaceCam.textContent = selectedCam;
 });
 
+
 // API consumption
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const fromCity = document.getElementById('from');
-const toCity = document.getElementById('toCity');
-const departureDate = document.getElementById("departureDate");
 
 // For handling Registration
 function handleRegister() {
-  if (!username.value || !email.value || !password.value) {
-    console.error("Please fill in all required fields.");
-    return;
-  }
-
+  
+  const username = document.getElementById("username");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const locate = document.getElementById("locate");
+  const date = document.getElementById("date");
+  const cpassword = password.value;
+  console.log(username.value, email.value, password.value, locate.value, date.value, cpassword.value);
   fetch("https://reach-0hh4.onrender.com/authenticationRoute/register", {
     method: "POST",
     headers: {
@@ -79,13 +85,15 @@ function handleRegister() {
     body: JSON.stringify({
       username: username.value,
       email: email.value,
-      password: password.value
-    })
+      password: password.value,
+      location: locate.value,
+      date: date.value,
+    }),
   })
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      if (data.success) {
+      if (data.success && cpassword == password) {
         window.location.href = 'index2.html';
       } else {
         console.error(data.error);
@@ -94,6 +102,25 @@ function handleRegister() {
     .catch((err) => {
       console.error(err);
     });
+
+  const selectEmail = document.getElementById("email");
+  const selectedEmail = selectEmail.options[selectEmail.selectedIndex].text;
+
+  const replaceEmail = document.getElementById("replaceEmail");
+  replaceEmail.textContent = selectedEmail;
+
+  const selectPassword = document.getElementById("password");
+  const selectedPassword = selectPassword.options[selectPassword.selectedIndex].text;
+
+  const replacePassword = document.getElementById("replacePassword");
+  replacePassword.textContent = selectedPassword;
+
+  const selectLocation = document.getElementById("locate");
+  const selectedLocation = selectLocation.options[selectLocation.selectedIndex].text;
+
+  const replaceLocation = document.getElementById("replaceCity");
+  replaceLocation.textContent = selectedLocation;
+
 }
 
 // For handling Login....POST Method
@@ -116,10 +143,11 @@ function handlerLogin() {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      if (data.success) {
+      localStorage.setItem('userDate', json.stringify(data))
+      if (data.user) {
         window.location.href = 'index2.html';
       } else {
-        console.error(data.error);
+        errorMessage.innerHtml = data
       }
     })
     .catch((err) => {
@@ -129,40 +157,33 @@ function handlerLogin() {
 
 // For handling Availability
 function handlerAvailability() {
-  if (!fromCity.value || !toCity.value || !departureDate.value) {
-    console.error("Please fill in all required fields.");
+  
+  const selectedFromCity = document.getElementById('from');
+  const selectedToCity = document.getElementById('toCity');
+  const selectedDepartureDate = document.getElementById('departureDate');
+  
+  if (!selectedFromCity.value || !selectedToCity.value || !selectedDepartureDate.value) {
+    alert("Please fill in all required fields.");
     return;
   }
-
-  const selectedFromCity = fromCity.value;
-  const selectedToCity = toCity.value;
-  const selectedDepartureDate = departureDate.value;
-
   console.log(selectedFromCity, selectedToCity, selectedDepartureDate);
 
-  fetch("https://reach-0hh4.onrender.com/tripRoute", {
+  fetch("https://reach-0hh4.onrender.com/reservationRoute", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      name: selectedFromCity,
-      time: selectedToCity,
-      date: selectedDepartureDate
-    })
+      from: selectedFromCity.value,
+      to: selectedToCity.value,
+      date: selectedDepartureDate.value,
+    }),
   })
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      if (data.success) {
-        window.location.href = 'index2.html';
-      } else {
-        console.error(data.error);
-      }
     })
-    .catch((err) => {
-      console.error(err);
-    });
+    .catch((error) => console.log(err));
 
   const selectElement = document.getElementById("from");
   const selectedOption = selectElement.options[selectElement.selectedIndex].text;
@@ -181,6 +202,24 @@ function handlerAvailability() {
 
   const replaceDate = document.getElementById("replaceDate");
   replaceDate.textContent = selectedOption3;
+
+  const selectElement4 = document.getElementById("departureDate");
+  const selectedOption4 = selectElement4.value;
+
+  const replaceDate2 = document.getElementById("replaceDate2");
+  replaceDate2.textContent = selectedOption4;
+
+  const selectElement5 = document.getElementById("departureDate");
+  const selectedOption5 = selectElement5.value;
+
+  const replaceDate3 = document.getElementById("replaceDate2");
+  replaceDate3.textContent = selectedOption5;
+
+  const selectElement6 = document.getElementById("departureDate");
+  const selectedOption6 = selectElement6.value;
+
+  const replaceDate4 = document.getElementById("replaceDate4");
+  replaceDate4.textContent = selectedOption6;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
