@@ -125,11 +125,17 @@ function handleRegister() {
 
 // For handling Login....POST Method
 function handlerLogin() {
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const errorMessage = document.getElementById("errorMessage");
+
+  // Check if email and password are filled
   if (!email.value || !password.value) {
     console.error("Please fill in all required fields.");
     return;
   }
 
+  // Send a POST request to the login endpoint
   fetch("https://reach-0hh4.onrender.com/authenticationRoute/login", {
     method: "POST",
     headers: {
@@ -140,20 +146,22 @@ function handlerLogin() {
       password: password.value
     })
   })
-    .then((res) => res.json())
+    .then((res) => res.json()) // Parse response as JSON
     .then((data) => {
       console.log(data);
-      localStorage.setItem('userDate', json.stringify(data))
+      localStorage.setItem('userData', JSON.stringify(data)); // Store data in local storage
       if (data.user) {
-        window.location.href = 'index2.html';
+        window.location.href = 'index2.html'; // Redirect to index2.html if login is successful
       } else {
-        errorMessage.innerHtml = data
+        errorMessage.innerHTML = data; // Display error message
       }
     })
     .catch((err) => {
       console.error(err);
     });
 }
+
+
 
 // For handling Availability
 function handlerAvailability() {
