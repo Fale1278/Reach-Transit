@@ -73,9 +73,9 @@ function handleRegister() {
   const username = document.getElementById("username");
   const email = document.getElementById("email");
   const password = document.getElementById("password");
-  const locate = document.getElementById("locate");
+  const locate = document.getElementById("location");
   const date = document.getElementById("date");
-  const cpassword = password.value;
+  const cpassword = document.getElementById("cpassword");
   console.log(username.value, email.value, password.value, locate.value, date.value, cpassword.value);
   fetch("https://reach-0hh4.onrender.com/authenticationRoute/register", {
     method: "POST",
@@ -93,7 +93,7 @@ function handleRegister() {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      if (data.success && cpassword == password) {
+      if (data.success) {
         window.location.href = 'index2.html';
       } else {
         console.error(data.error);
@@ -123,12 +123,17 @@ function handleRegister() {
 
 }
 
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "block";
+}
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "none";
+}
+
 // For handling Login....POST Method
 function handlerLogin() {
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
-  const errorMessage = document.getElementById("errorMessage");
-
   // Check if email and password are filled
   if (!email.value || !password.value) {
     console.error("Please fill in all required fields.");
@@ -149,7 +154,7 @@ function handlerLogin() {
     .then((res) => res.json()) // Parse response as JSON
     .then((data) => {
       console.log(data);
-      localStorage.setItem('userData', JSON.stringify(data)); // Store data in local storage
+      localStorage.setItem('userDate', JSON.stringify(data)); // Store data in local storage
       if (data.user) {
         window.location.href = 'index2.html'; // Redirect to index2.html if login is successful
       } else {
@@ -159,8 +164,10 @@ function handlerLogin() {
     .catch((err) => {
       console.error(err);
     });
-}
 
+    const loginModal = document.getElementById("loginModal");
+  loginModal.style.display = "none";
+}
 
 
 // For handling Availability

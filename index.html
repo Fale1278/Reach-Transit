@@ -20,7 +20,8 @@
       <a href="#services" class="topnav-a">Services</a>
       <a href="#booking" class="topnav-a">Tickets</a>
       <a href="#footer" class="topnav-a">Contact</a>
-      <button class="btnOpen">Sign up/Login</button>
+      <button class="btnOpen">Sign up</button>
+      <button onclick="openModal('loginModal')">Login</button>
       <section class="box">
         <div class="form">
           <div class="close">&times;</div>
@@ -40,12 +41,12 @@
               <form>
                 <div class="form-box">
                   <input type="text"  class="form-imput" placeholder="Full Name" id="username" required> 
-                  <input type="text" class="form-imput" placeholder="locate" required> 
+                  <input type="text" class="form-imput" placeholder="Location" required id="location"> 
                 </div>
       
                 <div class="form-box">
                   <input type="email"class="form-imput" placeholder="Enter Email" id="email" required> 
-                  <input type="date" class="form-imput" placeholder="Date" id="date"required> 
+                  <input type="date" class="form-imput" placeholder="Date" id="date" required> 
                 </div>
       
                 <div class="form-box" >
@@ -71,6 +72,19 @@
             </div>
         </div>
       </section>
+      <div class="modal" id="loginModal">
+        <div class="modal-content">
+          <button class="close-button" onclick="closeModal('loginModal')">&times;</button>
+          <form action="">
+            <input type="email" id="loginEmail" required placeholder="email">
+            <input type="password" id="loginPassword" required placeholder="password">
+    
+            <div id="loginErrorMessage"></div>
+    
+            <button type="button" onclick="handlerLogin()">Login</button>
+          </form>
+        </div>
+    </div>
     </nav>
   </header>
   <main>
